@@ -25,6 +25,10 @@ const numWrong = 0;
 //
 const createDivsForChars = (word) => {
   // Replace this with your code
+  for (const letter in word) {
+    const tempDiv = `<div class='letter-box ${letter}'></div>`;
+    document.querySelector('#word-container').insertAdjacentHTML('beforeend', tempDiv);
+  }
 };
 
 // Loop over each letter in the alphabet and generate a button for each letter
