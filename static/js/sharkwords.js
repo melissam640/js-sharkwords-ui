@@ -50,14 +50,18 @@ const disableLetterButton = (buttonEl) => {
   buttonEl.disabled = true;
 };
 
-//disableLetterButton=e=>{e.disabled=!0}
-
 // This is a helper function we will use in the future
 // It should return `true` if `letter` is in the word
 // For now, you should test it out to make sure it works
 
 const isLetterInWord = (letter, word) => {
   // Replace this with your code
+  for (const tempLetter of word) {
+    if (tempLetter === letter) {
+      return true;
+    }
+  }
+  return false;
 };
 
 // This is like if __name__ == '__main__' in Python
@@ -68,7 +72,7 @@ const isLetterInWord = (letter, word) => {
   // You can change this to choose a random word from WORDS once you
   // finish this lab but we hard code it so we know what the word is
   // and can tell if things look correct for this word
-  const word = 'hello';
+  const word = WORDS[Math.floor(Math.random() * WORDS.length)];
 
   createDivsForChars(word);
 
