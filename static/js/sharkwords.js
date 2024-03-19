@@ -35,6 +35,10 @@ const createDivsForChars = (word) => {
 // The buttons should be appended to the section with id="letter-buttons".
 const generateLetterButtons = () => {
   // Replace this with your code
+  for (const letter of ALPHABET) {
+    const tempButton = `<button>${letter}</button>`;
+    document.querySelector('#letter-buttons').insertAdjacentHTML('beforeend', tempButton);
+  }
 };
 
 // Set the `disabled` property of `buttonEl` to true.
