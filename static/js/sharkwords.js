@@ -47,7 +47,10 @@ const generateLetterButtons = () => {
 //
 const disableLetterButton = (buttonEl) => {
   // Replace this with your code
+  buttonEl.disabled = true;
 };
+
+//disableLetterButton=e=>{e.disabled=!0}
 
 // This is a helper function we will use in the future
 // It should return `true` if `letter` is in the word
